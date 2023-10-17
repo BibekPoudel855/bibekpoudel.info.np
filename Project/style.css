@@ -1,0 +1,413 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} 
+.nav-logo{
+    height: 50px;
+    width: 113px;
+
+} 
+.logo{
+    height: 50px;
+    width: 113px;
+    background-image: url("/Project/Images/amazon_logo.png");
+    background-size: cover;
+    transition: all 50ms ease 0s;
+}
+.nav-logo:hover{
+    border: 0.5px solid white;
+    transform: scale(0.9);
+}
+.outer-nav-address{
+    height: 50px;
+    width: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#add-1st{
+    color: #cccccc;
+    font-weight: lighter;
+    font-size: 0.90rem;
+    margin-left: 18px;
+}
+#add-2nd{
+
+    padding-left: 2px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/*border hover for all element */
+.border:hover{
+    border: 0.5px solid white;
+    transform: scale(1);
+}
+
+.nav-search{
+    display: flex;
+    width: 800px;
+    height: 40px;
+    border-radius: 7px;
+}
+.search-select{
+    /* margin-left: 20px; */
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: #efe8e8;
+    padding: 5px;
+    text-align: center;
+    border: none;
+}
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+.nav-search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius:7px;
+    color: #0f1111;
+}
+.nav-search-icon:hover{
+    background-color: #f2b362;
+}
+
+.nav-search:hover{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 3px solid #febd68;
+}
+
+
+.nav-flag{
+    height: 50px;
+    width: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-usa-flag{
+    margin-right: 5px;
+}
+
+.outer-nav-sign-in{
+    width: 131;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-sign-1st{
+    font-size: 12px;
+    font-weight: 500;
+}
+.nav-sign-2nd{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.outer-nav-order{
+    height: 50px;
+    width: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-order-1st{
+    font-size: 12px;
+    font-weight: 500;
+}
+#nav-order-2nd{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.outer-nav-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 84px;
+
+}
+.nav-cart i{
+    font-size: 25px;
+}
+.nav-cart{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.nav-cart p span{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/*Second Line Navbar*/
+
+.second-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40px;
+    background-color: #222f3d;
+    color: white;
+    font-size: 15px;
+}
+.second-nav-left-box a, .second-nav-right-box a{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
+.second-nav-left-box{
+    width: 80%;
+}
+.second-nav-right-box{
+    font-weight: 700;
+}
+
+/* Content */
+/*Hero*/
+
+.hero-section{
+    width: 100%;
+    height: 400px;
+    background-image: url("/Project/Images/hero_image.jpg");
+    background-size: contain;
+    font-size: 14px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+.hero-message{
+    background-color: white;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 1px;
+    margin-bottom: 55px;
+}
+.hero-message p a{
+    text-decoration:none;
+    color: #007185;
+}
+
+
+/* boxes */
+
+/* first line boxex*/
+/* we can reuse code but maile re use garexaina so yo tala box 1 ma jun code xa tei aru ma ne same ho*/
+.first-line-shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+
+
+}
+
+.box1,.box2,.box3,.box4{
+    height: 440px;
+    width: 23%;
+    background-color: white;
+    margin-top: -30px;
+
+    transition: all;
+    transition-duration: 80ms;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.box1 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box1-img{
+    background-image: url("/Project/Images/box1_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box1 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+.box2 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box2-img{
+    background-image: url("/Project/Images/box2_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box2 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+
+.box3 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box3-img{
+    background-image: url("/Project/Images/box3_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box3 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+
+.box4 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box4-img{
+    background-image: url("/Project/Images/box4_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box4 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+
+}
+
+/* second line boxes*/
+/* we can reuse code but maile re use garexaina so yo tala box 1 ma jun code xa tei aru ma ne same ho*/
+
+.second-line-shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+
+}
+
+.box5,.box6,.box7,.box8{
+    height: 440px;
+    width: 23%;
+    background-color: white;
+    margin-top: 2%;
+    transition: all;
+    transition-duration: 80ms;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.box5 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box5-img{
+    background-image: url("/Project/Images/box5_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box5 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+.box6 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box6-img{
+    background-image: url("/Project/Images/box6_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box6 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+
+.box7 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box7-img{
+    background-image: url("/Project/Images/box7_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box7 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+}
+
+
+
+.box8 h2{
+    margin: 20px 15px 5px 15px;
+}
+.box8-img{
+    background-image: url("/Project/Images/box8_image.jpg");
+    height: 350px;
+    background-size: cover;
+    margin: 10px 15px 10px 15px;
+}
+.box8 a{
+    margin: 10px 0px 2px 15px;
+    text-decoration: none;
+    color: #007185;
+
+}
+/* hover for 1st line boxes and second line boxex*/
+
+.box-shop:hover{
+    transform: scale(1.04);
+}
+
