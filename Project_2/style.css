@@ -29,7 +29,22 @@
   background-color: #0e4722;
   border-radius: 200px;
 } */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+  background-color: var(--fourth-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background: #0e4722;
+}
 
 /* Pre Code */
 
