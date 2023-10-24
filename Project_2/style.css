@@ -14,7 +14,7 @@
   --footer-background: #25282e;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 20px;
 }
 ::-webkit-scrollbar-track {
@@ -28,7 +28,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #0e4722;
   border-radius: 200px;
-}
+} */
+
+
 /* Pre Code */
 
 * {
@@ -177,7 +179,7 @@ ul li {
   justify-content: start;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/Image_project_2/school_img.jpg");
+    url("/Project_2/Image_project_2/school_img.jpg");
   width: 99%;
   height: 300px;
   background-position: center;
@@ -190,7 +192,7 @@ ul li {
   position: relative;
   font-size: 150px;
   font-weight: 600;
-  color: rgb(222, 215, 215);
+  color: rgba(222, 215, 215,0.3);
 }
 
 /*Events Annnouncements 3 board*/
