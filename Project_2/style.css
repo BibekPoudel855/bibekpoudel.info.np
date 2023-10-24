@@ -595,7 +595,7 @@ ul li {
 
 
 
-
+/* Responsive */
 @media (max-width : 1200px) {
   .manager{
     height: 800px;
@@ -606,3 +606,22 @@ ul li {
   }
 
 
+
+/* Warning */
+
+@media (min-width:600px) {
+  .warning{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .warning{
+    font-size: 1em;
+    color: black;
+    display: inline-block;
+    width: 100%;
+  }
+  main,section,header,footer{
+    display: none;
+  }
+}
