@@ -616,7 +616,7 @@ ul li {
 }
 @media (max-width: 600px) {
   .warning{
-    font-size: 1em;
+    font-size: 7vmin;
     color: black;
     display: inline-block;
     width: 100%;
