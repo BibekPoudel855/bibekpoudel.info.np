@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+
+button{
+    padding: 12px 20px;
+    background-color: rgb(11, 58, 188);
+    background-size: cover;
+    display: block;
+    margin: 20px;
+}
