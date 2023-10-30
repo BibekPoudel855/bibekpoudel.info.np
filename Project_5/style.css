@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+}
+/* Variables */
+:root{
+    --main-color: #041308;
+    --sec-color: #0b3317;
+}
+
+
+
+/* Main Code*/
+
+.main-container{
+    background: linear-gradient(to right,#041308,#0b3317);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Left */
+.left{
+    flex-basis: 35%;
+    margin-top: -50px;
+}
+.left-heading{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.left-para{
+    margin-top: 1.5vw;
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+
+/* Right */
+
+.right{
+    flex-basis: 50%;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-auto-rows: 120px;
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: rgb(255, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out 0s;
+}
+.b1{
+    grid-row-start:1 ;
+    grid-row-end: 3;
+}
+.b2{
+    grid-column: 2 / 4;
+}
+.b4{
+    grid-row: span 2;
+}
+.b5{
+    grid-column: 1/3;
+}
+.b7{
+    grid-column: span 2;
+}
+
+/* Hover for all element */
+
+.box:hover{
+    background-position: center;
+    background-color: #999;
+    box-shadow: 1px 1px 4px white;
+    cursor: pointer;
+}
+
+
+/* responsive */
+@media (max-width : 600px) {
+    .main-container{
+        flex-direction: column;
+    }
+}
