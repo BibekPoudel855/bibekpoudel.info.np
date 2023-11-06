@@ -594,6 +594,19 @@ ul li {
 }
 
 
+/* Message box last */
+
+
+.message i{
+  font-size: 3vw;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  color: var(--second-color);
+}
+
+
+
 
 /* Responsive */
 @media (max-width : 1200px) {
