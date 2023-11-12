@@ -8,15 +8,18 @@ body{
     padding: 20px;
 }
 a{
+    font-size: 20px;;
     text-decoration: none;
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 3vw 0;
+
 }
 
-button{
-    padding: 12px 20px;
-    background-color: rgb(11, 58, 188);
-    background-size: cover;
-    display: block;
-    margin: 20px;
+span{
+    margin-right:2vw;
+    text-decoration: underline;  
+    color: rgb(9, 92, 175);
 }
+
+
