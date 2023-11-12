@@ -1,5 +1,10 @@
-let apikey = "d19db930781145a69e1d13dcbbb97cbe";
+// let apikey = "d19db930781145a69e1d13dcbbb97cbe";
+let apikey = "0b8a7a4c25234a74a7bb45311cd9b190";
 const url = "https://newsapi.org/v2/everything?q=";
+
+
+window.addEventListener("load", () => fetchnews("ICC"));
+
 
 // to fetch or to get articlee or news
 async function fetchnews(query) {
@@ -48,7 +53,7 @@ function fillDataInCard(cardClone, article) {
 // let news_search=prompt('Search News');
 // window.addEventListener('load', ()=> fetchnews(news_search));
 
-window.addEventListener("load", () => fetchnews("ICC"));
+
 
 // Input
 // adding function of search button  and input

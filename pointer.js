@@ -1,6 +1,8 @@
 let apikey = "d19db930781145a69e1d13dcbbb97cbe";
 const url = "https://newsapi.org/v2/everything?q=";
 
+
+window.addEventListener("load", () => fetchnews("ICC"));
 // to fetch or to get articlee or news
 async function fetchnews(query) {
   // const res=await
@@ -47,8 +49,6 @@ function fillDataInCard(cardClone, article) {
 // Categ of nerws
 // let news_search=prompt('Search News');
 // window.addEventListener('load', ()=> fetchnews(news_search));
-
-window.addEventListener("load", () => fetchnews("ICC"));
 
 // Input
 // adding function of search button  and input
