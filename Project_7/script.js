@@ -1,1 +1,56 @@
-function _0x3751(_0xa64581,_0x428420){const _0x406dfc=_0x406d();return _0x3751=function(_0x3751e2,_0x21f613){_0x3751e2=_0x3751e2-0x17d;let _0x52d842=_0x406dfc[_0x3751e2];return _0x52d842;},_0x3751(_0xa64581,_0x428420);}const _0xd7492=_0x3751;(function(_0x3e7781,_0x53fa66){const _0x5ccc73=_0x3751,_0x5be70d=_0x3e7781();while(!![]){try{const _0x38842e=parseInt(_0x5ccc73(0x199))/0x1*(-parseInt(_0x5ccc73(0x17d))/0x2)+parseInt(_0x5ccc73(0x181))/0x3+parseInt(_0x5ccc73(0x1a2))/0x4+-parseInt(_0x5ccc73(0x18b))/0x5*(parseInt(_0x5ccc73(0x188))/0x6)+parseInt(_0x5ccc73(0x18f))/0x7+parseInt(_0x5ccc73(0x186))/0x8*(parseInt(_0x5ccc73(0x197))/0x9)+parseInt(_0x5ccc73(0x19f))/0xa;if(_0x38842e===_0x53fa66)break;else _0x5be70d['push'](_0x5be70d['shift']());}catch(_0xfdd801){_0x5be70d['push'](_0x5be70d['shift']());}}}(_0x406d,0xb688c));let apikey=_0xd7492(0x17e);const url=_0xd7492(0x1a0);async function fetchnews(_0x2dd206){const _0xfe3361=_0xd7492,_0x4d81f2=await fetch(''+url+_0x2dd206+_0xfe3361(0x1a4)+apikey),_0x58c1de=await _0x4d81f2[_0xfe3361(0x196)]();bindData(_0x58c1de[_0xfe3361(0x192)]);}function _0x406d(){const _0x5443b2=['https://newsapi.org/v2/everything?q=','src','742348HNNWLF','#news-source','&apiKey=','Asia/Jakarta','name','2tWUDQx','d19db930781145a69e1d13dcbbb97cbe','nav-button','forEach','356037lQjKRy','load','\x20·\x20','template-news-card','getElementById','7028776AbzTBL','click','618KscVMW','toLocaleString','source','65005Bxufyh','#news-img','nav-search','url','10203830pSjEMn','firstElementChild','ICC','articles','card-container','addEventListener','_blank','json','9URQpSj','title','794679wEHFTe','urlToImage','querySelector','#news-description','innerHTML','en-US','2408890QcxWkh'];_0x406d=function(){return _0x5443b2;};return _0x406d();}function bindData(_0x4013f0){const _0x49b17a=_0xd7492,_0x3f5fa7=document[_0x49b17a(0x185)](_0x49b17a(0x193)),_0x4bfc9a=document[_0x49b17a(0x185)](_0x49b17a(0x184));_0x3f5fa7[_0x49b17a(0x19d)]='',_0x4013f0[_0x49b17a(0x180)](_0xade920=>{const _0x476de0=_0x49b17a;if(!_0xade920[_0x476de0(0x19a)])return;const _0x5d8178=_0x4bfc9a['content']['cloneNode'](!![]);fillDataInCard(_0x5d8178,_0xade920),_0x3f5fa7['appendChild'](_0x5d8178);});}function fillDataInCard(_0x1bf09f,_0x37b623){const _0x17213e=_0xd7492,_0x5dbc9d=_0x1bf09f[_0x17213e(0x19b)](_0x17213e(0x18c)),_0x4db1f8=_0x1bf09f[_0x17213e(0x19b)]('#news-title'),_0x192077=_0x1bf09f[_0x17213e(0x19b)](_0x17213e(0x1a3)),_0x5b66d9=_0x1bf09f[_0x17213e(0x19b)](_0x17213e(0x19c));_0x5dbc9d[_0x17213e(0x1a1)]=_0x37b623['urlToImage'],_0x4db1f8[_0x17213e(0x19d)]=_0x37b623[_0x17213e(0x198)],_0x5b66d9[_0x17213e(0x19d)]=_0x37b623['description'];const _0x36ab66=new Date(_0x37b623['publishedAt'])[_0x17213e(0x189)](_0x17213e(0x19e),{'timeZone':_0x17213e(0x1a5)});_0x192077[_0x17213e(0x19d)]=_0x37b623[_0x17213e(0x18a)][_0x17213e(0x1a6)]+_0x17213e(0x183)+_0x36ab66,_0x1bf09f[_0x17213e(0x190)]['addEventListener'](_0x17213e(0x187),()=>{const _0x9e0206=_0x17213e;window['open'](_0x37b623[_0x9e0206(0x18e)],_0x9e0206(0x195));});}window[_0xd7492(0x194)](_0xd7492(0x182),()=>fetchnews(_0xd7492(0x191)));const searchButton=document[_0xd7492(0x185)](_0xd7492(0x17f)),searchText=document['getElementById'](_0xd7492(0x18d));
+let apikey = "d19db930781145a69e1d13dcbbb97cbe";
+const url = "https://newsapi.org/v2/everything?q=";
+
+// to fetch or to get articlee or news
+async function fetchnews(query) {
+  // const res=await
+  // fetch('${url}${query}&apiKey=${apikey}');
+  const res = await fetch(`${url}${query}&apiKey=${apikey}`);
+  const data = await res.json();
+  bindData(data.articles);
+}
+function bindData(articles) {
+  const cardsContainer = document.getElementById("card-container");
+  const newsCardTemplate = document.getElementById("template-news-card");
+
+  cardsContainer.innerHTML = "";
+
+  articles.forEach((article) => {
+    if (!article.urlToImage) return;
+    const cardClone = newsCardTemplate.content.cloneNode(true);
+    fillDataInCard(cardClone, article);
+    cardsContainer.appendChild(cardClone);
+  });
+}
+// fill data in template tag
+function fillDataInCard(cardClone, article) {
+  const newsImg = cardClone.querySelector("#news-img");
+  const newsTitle = cardClone.querySelector("#news-title");
+  const newsSource = cardClone.querySelector("#news-source");
+  const newsDesc = cardClone.querySelector("#news-description");
+
+  newsImg.src = article.urlToImage;
+  newsTitle.innerHTML = article.title;
+  newsDesc.innerHTML = article.description;
+
+  const date = new Date(article.publishedAt).toLocaleString("en-US", {
+    timeZone: "Asia/Jakarta",
+  });
+
+  newsSource.innerHTML = `${article.source.name} · ${date}`;
+
+  cardClone.firstElementChild.addEventListener("click", () => {
+    window.open(article.url, "_blank");
+  });
+}
+
+// Categ of nerws
+// let news_search=prompt('Search News');
+// window.addEventListener('load', ()=> fetchnews(news_search));
+
+window.addEventListener("load", () => fetchnews("ICC"));
+
+// Input
+// adding function of search button  and input
+const searchButton = document.getElementById("nav-button");
+const searchText = document.getElementById("nav-search");
