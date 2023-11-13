@@ -151,11 +151,11 @@ main{
     height: 100%;
     position: relative;
     padding: 5vw 3vw;
+    /* white-space: nowrap; */
     overflow-x: auto;
-    white-space: nowrap;
-        /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .right-boxes{
@@ -165,7 +165,7 @@ main{
     position: relative;
     border-radius: 8px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-    display: inline-block;
+    /* display: inline-block; */
     margin-right: 2vw;
     transition: all 90ms ease 0s;
     scroll-behavior: smooth;

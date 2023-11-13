@@ -93,3 +93,26 @@ i.active{
     display: none;
     transition:all 1000ms ease 0s;
 }
+
+
+
+
+
+/* Warning */
+
+@media (min-width:600px) {
+  .warning{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .warning{
+    font-size: 7vmin;
+    color: black;
+    display: inline-block;
+    width: 100%;
+  }
+  main,section,header,footer{
+    display: none;
+  }
+}
