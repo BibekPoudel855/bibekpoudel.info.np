@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@400;700&display=swap");
+
+/* "RESETS" this is for all webpage */
+/* Variable */
+:root {
+  --first-color: #a2a2a2;
+  --second-color: #082813;
+  --third-color: #1f2227;
+  --fourth-color: #17c787;
+  --heading-color: #333333;
+  --paragraph-color: #777777;
+  --accent-color-dark: #1d1d1d;
+  --padding-inline: 20px;
+  --footer-background: #25282e;
+}
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 100px;
+  /* box-shadow: 0px 2px 20px 7px #000000; */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(156, 151, 151);
+  border-radius: 200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  /*display: inline-block;*/
+}
+ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+i {
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+.h {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 80vw;
+  margin-inline: auto;
+}
+button {
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 19px;
+  height: 100px;
+  /* border-bottom: 1px solid black; */
+  padding: 0 10vw;
+  font-weight: 400;
+}
+nav .bar {
+  display: none;
+}
+.nav-img img {
+  height: 55px;
+  width: 180px;
+}
+.nav-right ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+.nav-right ul {
+  display: flex;
+  gap: 30px;
+}
+
+.ho {
+  background: rgb(105, 102, 102);
+  height: 200px;
+  width: 150px;
+  position: absolute;
+  top: 8%;
+  right: 20%;
+  display: none;
+  z-index: 999;
+}
+.hov:hover .ho {
+  display: block;
+}
+
+/* content */
+/* first heading */
+.hero-section {
+  margin-top: 50px;
+}
+.hero-section-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  /* justify-content: space-evenly; */
+  /* height: 30vw; */
+  /* background: #000; */
+}
+.first-heading h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+.first-heading h1 span {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+/*///// second heading ////*/
+
+.second-heading {
+  width: 83vw;
+  text-align: center;
+}
+.second-heading h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.third-heading-button button {
+  padding: 14px 20px;
+  background: #00b6d1;
+
+  border-radius: 8px;
+  border: none;
+}
+.third-heading-button a {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.third-heading-button button:hover {
+  background: #b9c0c1;
+}
+/* second section */
+
+.second-lang-sec {
+  margin: 50px 0 100px 0;
+}
+
+.logo-download-texts {
+  display: flex;
+  align-items: center;
+}
+
+.logo-download-texts h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+}
+.logo-download-texts h3 span {
+  font-weight: 300;
+  font-size: 14.4px;
+}
+
+/*////// second section boxes grid ///////*/
+
+.lang-boxes {
+  margin-top: 50px;
+}
+.lang-cards {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+.lang-cards h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.lang-cards h6 {
+  font-weight: 300;
+  margin: 0 0 15px 0;
+}
+
+.blue-button {
+  padding: 8px 15px;
+  margin: 0 10px;
+  background-color: #00b6d1;
+}
+.green-button {
+  padding: 8px 15px;
+  background-color: #81c780;
+}
+.green-button:hover {
+  background: #99ad9c;
+}
+.blue-button:hover {
+  background: #b9c0c1;
+}
+/*//////\\\\\ grid Code\\\\\//////*/
+
+.lang-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  /* grid-template-rows: 130px 130px 130px 130px; */
+}
+
+/*////////// subscribe email section && free period trial section /////////////*/
+
+.subs-email-sec {
+  color: white;
+  background-color: #222222;
+  height: 500px;
+}
+
+.text-email-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+}
+
+/* left */
+.join-text-left {
+  text-align: center;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.join-text-left b {
+  font-size: 25px;
+  font-weight: 600;
+}
+.join-text-left p {
+  font-size: 16px;
+  font-weight: 300;
+  width: 500px;
+}
+
+/* right */
+.sub-email-box {
+  height: 270px;
+  width: 450px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 7px 20px 7px;
+}
+.sub-email-box h3 {
+  color: #00b6d1;
+  font-size: 24px;
+}
+.sub-email-box p {
+  font-size: 14px;
+  color: black;
+  font-weight: 300;
+}
+.sub-email-box input {
+  height: 50px;
+  width: 21.5vw;
+  padding: 0 10px;
+}
+.sub-email-box button {
+  color: white;
+  background-color: #00b6d1;
+  padding: 17px 9.2vw;
+}
+
+/*////// last section texts//////// */
+
+.exe-msi-text-section {
+  background-color: #222222;
+  color: white;
+}
+
+.inner-exe-msi-text {
+  height: 33vh;
+}
+.inner-exe-msi-text h3 {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 5px 0 3px 0;
+}
+
+.inner-exe-msi-text p {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 3px 0 8px 0;
+}
+.inner-exe-msi-text p span {
+  color: #0db6d1;
+}
+
+/*///// footer ///*/
+
+footer {
+  height: 650px;
+  background-color: #f9f9f9;
+}
+
+/* first section lists & input box  */
+.footer-lists-input-cont {
+  display: flex;
+  justify-content: space-between;
+  color: #222222;
+  padding: 70px 0 50px 0;
+}
+.footer-lists-input-cont ul li {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  transition: all 80ms ease 0s;
+}
+.footer-lists-input-cont ul li:hover {
+  transform: translateX(8px);
+}
+.footer-lists-input-cont h4 {
+  padding-bottom: 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.footer-lists-input-cont p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+/* .first-list{
+}
+.second-list{
+}
+.third-list{
+
+} */
+
+.fourth-input-email-box {
+  width: 240px;
+  padding: 0 12px;
+}
+
+.fourth-input-email-box input {
+  padding: 10px 13px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 0.8px solid rgb(177, 174, 174);
+  background-color: #ffffff;
+}
+.fourth-input-email-box button {
+  font-size: 14px;
+  padding: 10px 65px;
+  background-color: #00b6d1;
+}
+
+/* footer last section logo, copyright, social links */
+
+.footer-logo-social-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-logo-sec img {
+  height: 50px;
+  width: 150px;
+}
+.left-logo-sec p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+/* footer social links */
+
+.footer-social-links i {
+  margin: 0 4px;
+  font-size: 30px;
+  transition: all 80ms ease-in 0s;
+}
+.footer-social-links i:hover {
+  transform: scale(1.2);
+}
+
+/* responsive */
+@media (max-width: 950px) {
+  body{
+    width: 100vw;
+    /* overflow: hidden; */
+  }
+  .container {
+    max-width: 90vw;
+    overflow-x: hidden;
+  }
+
+  /* navbar */
+  nav{
+    width: 100vw;
+  }
+  .nav-img img {
+    width: 130px;
+    height: 40px;
+  }
+  .nav-right ul li {
+    display: none;
+  }
+  nav .bar {
+    display: block;
+    font-size: 28px;
+  }
+  nav .fa-language {
+    font-size: 5vw;
+  }
+
+  /* hero-section */
+
+  .hero-section-cont h1 {
+    font-size: 11vw;
+  }
+  .hero-section-cont h1 span {
+    font-size: 12vw;
+  }
+
+  /* .hero-section button and paragraph */
+  .second-heading h3 {
+    font-size: 5vw;
+  }
+  .third-heading-button button {
+    padding: 12px 18px;
+  }
+
+  /* download & logo */
+
+  .logo-download-texts img {
+    height: 15vw;
+  }
+  .logo-download-texts h3 {
+    font-size: 18px;
+  }
+  .logo-download-texts h3 span {
+    font-size: 12px;
+  }
+
+  /*/////// grid ////*/
+  .lang-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    /* grid-template-rows: 130px 130px 130px 130px; */
+  }
+  /*////////// subscribe email section && free period trial section /////////////*/
+
+  .text-email-cont{
+    flex-direction: column;
+  }
+
+
+  /* left */
+  .join-text-left{
+    padding: 20px 20px;
+  }
+  .join-text-left b{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .join-text-left p{
+    max-width: 90vw;
+    font-size: 15px;
+  }
+
+  /* right */
+
+  .sub-email-box{
+    height: 250px;
+    width: 90vw;
+  }
+  .sub-email-box h3{
+    font-size: 20px;
+  }
+  .sub-email-box p{
+    font-size: 15px;
+  }
+  .sub-email-box input{
+    height: 45px;
+    width: 80vw;
+  }
+  .sub-email-box button{
+    width: 80vw;
+  }
+
+
+  /*////// last section texts//////// */
+
+  .inner-exe-msi-text{
+    height: 70vh;
+  }
+
+  .inner-exe-msi-text h3{
+    padding: 10px 0 15px 0;
+  }
+
+  /*///// footer ///*/
+  footer{
+    height: 200vh;
+  }
+  /* first section lists & input box  */
+  .footer-lists-input-cont{
+    flex-direction: column;
+  }
+  .footer-lists-input-cont ul li{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .footer-lists-input-cont h4{
+    padding: 10px 0 12px 0;
+  }
+
+  .fourth-input-email-box{
+    width: 90vw;
+    padding: 10px 0 2px 0;
+  }
+
+  .fourth-input-email-box input{
+    margin: 10px 0;
+    width: 90vw;
+  }
+  .fourth-input-email-box button{
+    margin: 8px 0;
+    width: 90vw;
+  }
+  /* footer last section logo, copyright, social links */
+  .footer-logo-social-cont{
+    overflow-y: hidden;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .left-logo-sec{
+    padding: 25px 0;
+  }
+  .left-logo-sec p{
+    font-size: 15px;
+  }
+}
+
