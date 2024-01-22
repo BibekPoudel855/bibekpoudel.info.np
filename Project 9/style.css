@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+}
+/* Resets */
+/* variable */
+:root {
+  --first-color: red;
+  --second-color: black;
+  --thid-color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  max-width: 80vw;
+  margin: auto;
+}
+/* it is used to seperate two sections */
+.separation {
+  height: 10px;
+  background-color: #232323;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  transition: all 50ms ease-in;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(133, 132, 132);
+}
+
+/* code */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/images/hero-section.jpg);
+  height: 90vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/* navv */
+.hero-section .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 0;
+  height: 70px;
+  width: 100%;
+}
+.hero-section .nav img {
+  width: 150px;
+  height: 550px;
+}
+.hero-section .nav-right {
+  display: flex;
+  justify-content: space-between;
+  width: 14vw;
+}
+.nav-right button,
+.nav-right select {
+  color: white;
+  border-radius: 5px;
+  background-color: #e50914;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-right button {
+  border: 1px solid #e50914;
+}
+.nav-right select {
+  background-color: transparent;
+  border: 1px solid white;
+}
+/* content of hero sectionn */
+.hero-section-content {
+  /* height: 90%; */
+  height: calc(100% - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Martel Sans", sans-serif;
+  gap: 15px;
+}
+.hero-section-content h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+.hero-section-content p {
+  font-size: 24px;
+}
+.hero-section-content h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hero-section-content input {
+  padding: 8px 45px 8px 15px;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 200;
+  margin: 0 10px 0 0;
+}
+.hero-section-content button {
+  padding: 9px 15px;
+  border: none;
+  background-color: #e50914;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 4px;
+  color: white;
+}
+
+/* firts sectionnn */
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+}
+
+.first-section-text {
+  font-family: "Poppins", sans-serif;
+  max-width: 55%;
+}
+.first-section-text h2 {
+  font-size: 48px;
+}
+.first-section-text p {
+  font-size: 24px;
+}
+.first-section-tv-img {
+  position: relative;
+}
+.first-section-tv-img img {
+  height: 390px;
+  width: 520px;
+  position: relative;
+  z-index: 10;
+}
+.first-section-tv-img video {
+  position: absolute;
+  top: 1.9vw;
+  right: 0;
+}
+
+/* second section contents */
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-section-text {
+  font-family: "Poppins", sans-serif;
+  max-width: 50vw;
+}
+.second-section-text h2 {
+  font-size: 48px;
+}
+.second-section-text p {
+  font-size: 24px;
+}
+/* third section contents */
+.third-section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 400px;
+}
+.third-section-text {
+  font-family: "Poppins", sans-serif;
+  max-width: 30vw;
+}
+.third-section-text h2 {
+  font-size: 48px;
+}
+.third-section-text p {
+  font-size: 24px;
+}
+
+/* fourth image contents */
+.fourth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fourth-section-text {
+  font-family: "Poppins", sans-serif;
+  max-width: 40vw;
+}
+.fourth-section-text h2 {
+  font-size: 48px;
+}
+.fourth-section-text p {
+  font-size: 24px;
+}
+/*FAQ Section*/
+.faq {
+  margin-top: 20px;
+}
+.faq h2 {
+  font-size: 48px;
+  text-align: center;
+}
+.faq-boxes {
+  cursor: pointer;
+  height: 80px;
+  background-color: #2d2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  margin: 10px 0;
+  transition: all 60ms;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+.faq-boxes:hover {
+  background-color: #414141;
+}
+.faq-boxes i {
+  font-size: 24px;
+}
+.faq-boxes span {
+  font-size: 20px;
+}
+/* last email section  */
+.last-email-section {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.last-email-section h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.last-email-section span {
+  display: flex;
+}
+.last-email-section input {
+  padding: 8px 45px 8px 15px;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 200;
+  margin: 0 10px 0 0;
+}
+.last-email-section button {
+  padding: 9px 15px;
+  border: none;
+  background-color: #e50914;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 4px;
+  color: white;
+}
+/* footer section */
+.footer>p{
+  margin-bottom: 20px;
+  color: #B3B3B3;
+  text-decoration: underline;
+}
+.footer{
+  padding: 50px 0 0 0;
+}
+.footer-inner-cont{
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer-flex a{
+  color: #B3B3B3;
+  text-decoration: underline;
+}
