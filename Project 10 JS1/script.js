@@ -38,22 +38,28 @@ let winnerH4=document.querySelector("#winner-h4");
 let newGameButton=document.querySelector("#new-game-button");
 
 let turnO = true;
+let count=0; //to track draw
 buttons.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO === true) {
       // player o
+      box.style.color="blue";
       box.innerHTML = "O";
       turnO = false;
     } else {
       // player x
+      box.style.color="green";
       box.innerHTML = "X";
       turnO = true;
     }
     box.disabled = true;
-    checkWinner();
+    count++;
+    let isWinner=checkWinner();
+    if(count === 9 && isWinner!==true){
+      gameDrawn();
+    }
   });
 });
-
 
 //conditon for winnner
 const winningPattern = [
@@ -77,6 +83,13 @@ function disableButton(){
     button.disabled=true;
   }
 }
+// draw messege
+function gameDrawn() {
+  count=0;
+  winnerH4.innerHTML=`Game Drawn`;
+  winnerMessagePortal.classList.remove("hide-message");
+}
+
 //checking winner by some condn
 function checkWinner() {
   for (let pattern of winningPattern) {
@@ -87,11 +100,11 @@ function checkWinner() {
       if (pos1===pos2 && pos2===pos3) {
         winnerMessage(pos1);
         disableButton();
+        return true;
       }
     }
   }
-}
-
+};
 // to  enable button
 function enableButton() {
   for (const button of buttons) {
@@ -100,6 +113,7 @@ function enableButton() {
 }
 // reset and new game button 
 function resetNewGame() {
+  count=0;
   turnO=true;
   for (const button of buttons) {
     button.innerText="";
@@ -108,6 +122,6 @@ function resetNewGame() {
   enableButton();
 }
 // after pressing reseting and new game button
-newGameButton.addEventListener("click",resetNewGame)
-resetButton.addEventListener("click",resetNewGame)
+newGameButton.addEventListener("click",resetNewGame);
+resetButton.addEventListener("click",resetNewGame);
 
