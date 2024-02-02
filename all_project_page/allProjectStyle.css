@@ -230,4 +230,8 @@ nav {
     font-size: 5vw;
     margin-right: 2vw;
   }
+  /* project boxes  */
+  .project-boxes{
+    min-height: 520px;
+  }
 }
