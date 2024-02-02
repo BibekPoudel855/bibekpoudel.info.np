@@ -172,6 +172,7 @@ nav {
   transition: all 90ms ease 0s;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .project-boxes img{
   width: 100%;
@@ -188,6 +189,12 @@ nav {
 }
 .project-boxes p {
   margin: 5px 7px;
+}
+.last-updated{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: black;
 }
 .project-boxes:hover {
   box-shadow: 4px 4px 10px 1px#6b6b6b;
