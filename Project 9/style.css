@@ -54,7 +54,7 @@ li {
 /* code */
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/Project_9/assets/images/hero-section.jpg");
+    url("/Project 9/assets/images/hero-section.jpg");
   height: 90vh;
   width: 100vw;
   background-size: cover;
@@ -223,30 +223,55 @@ li {
 .faq {
   margin-top: 20px;
 }
+.faq-inner-container{
+  margin: 10px 0;
+}
 .faq h2 {
   font-size: 48px;
   text-align: center;
 }
 .faq-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   height: 80px;
   background-color: #2d2d2d;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 25px;
-  margin: 10px 0;
   transition: all 60ms;
   transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+
+}
+.faq-qns{
+  font-size: 24px;
+}
+.faq-ans{
+  margin-top: 1px;
+  max-height: 900vw;
+  background-color: #2d2d2d;
+  padding: 10px 25px;
+}
+.faq-ans p{
+  font-size: 24px;
+  padding: 15px 0;
 }
 .faq-boxes:hover {
   background-color: #414141;
 }
 .faq-boxes i {
-  font-size: 24px;
+  font-size: 30px;
 }
-.faq-boxes span {
-  font-size: 20px;
+
+
+/*//////////// for js //////////*/
+.js-passive{
+  display: none;
+}
+.js-active{
+  display: block;
+}
+.js-rotate{
+  transform: rotate(45deg);
 }
 /* last email section  */
 .last-email-section {
@@ -471,22 +496,27 @@ li {
 /*FAQ Section*/
 .faq {
   margin-top: 20px;
-  height: 130vh;
+  max-height: 900vh;
 }
+
 .faq h2 {
   font-size: 32px;
   margin: 20px 0;
 }
-.faq-boxes {
+.faq-boxes{
   height: 72px;
   margin: 10px 0;
+}
+.faq-boxes span p{
+  font-size: 18px;
 }
 .faq-boxes i {
   font-size: 18px;
 }
-.faq-boxes span {
+.faq-ans p{
   font-size: 18px;
 }
+
 
 /* last email section  */
 .last-email-section {
@@ -494,6 +524,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 40px 0;
   justify-content: center;
 }
 .last-email-section h3 {
