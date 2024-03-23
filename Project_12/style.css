@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* "RESETS" this is for all webpage */
+/* Variable */
+:root {
+  --first-color: #a2a2a2;
+  --second-color: #082813;
+  --third-color: #1f2227;
+  --fourth-color: #17c787;
+  --heading-color: #333333;
+  --paragraph-color: #777777;
+  --accent-color-dark: #1d1d1d;
+  --padding-inline: 20px;
+  --footer-background: #25282e;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+  background-color: var(--fourth-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0e4722;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul li {
+  list-style-type: none;
+}
+body {
+  background-color: #1c815a;
+  color: white;
+}
+main {
+  width: 90vw;
+  margin: auto;
+  height: 100vh;
+}
+/*///////////// code ////////////*/
+.container{
+    padding: 150px 0;
+}
+.company-name{
+    color: #011F3C;
+    font-size: 50px;
+}
+.title{
+    text-decoration: underline;
+    font-size: 40px;
+
+}
+.display-pass{
+    width: 50%;
+    height: 70px;
+    margin: 50px 0;
+    padding: 0 30px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.display-pass>input{
+    font-size: 30px;
+    font-weight: 400;
+    outline: 0;
+    border: 0;
+    height: 70px;
+    width: 70%;
+}
+.display-pass>img{
+    height: 50%;
+    cursor: pointer;
+}
+.generate-button{
+    background-color: #011F3C;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+@media (max-width: 600px) {
+    .container{
+        padding: 60px 0;
+    }
+    .company-name{
+        font-size: 40px;
+    }
+    .title{
+        font-size: 30px;
+    }
+
+    .display-pass{
+        width: 98%;
+        height: 60px;
+        padding: 0 8px;
+    }
+    .display-pass>input{
+        height: 50px;
+        width: 85%;
+        font-size: 24px;
+    }
+    .generate-button{
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+  }
