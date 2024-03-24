@@ -50,76 +50,153 @@ main {
   height: 100vh;
 }
 /*///////////// code ////////////*/
-.container{
-    padding: 150px 0;
+.container {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.company-name{
-    color: #011F3C;
-    font-size: 50px;
+.company-name {
+  color: #011f3c;
+  font-size: 50px;
 }
-.title{
-    text-decoration: underline;
-    font-size: 40px;
+.title {
+  text-decoration: underline;
+  font-size: 40px;
+}
+/* to display password */
+.display-pass {
+  width: 50%;
+  height: 70px;
+  margin: 30px 0;
+  padding: 0 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.display-pass > input {
+  font-size: 30px;
+  font-weight: 400;
+  outline: 0;
+  border: 0;
+  height: 70px;
+  width: 70%;
+}
+.display-pass > img {
+  height: 50%;
+  cursor: pointer;
+}
+/* requirement for generate password */
+.requirement{
+  height: 200px;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  padding: 10px 10px;
+  color: black;
 
 }
-.display-pass{
-    width: 50%;
-    height: 70px;
-    margin: 50px 0;
-    padding: 0 30px;
-    background-color: white;
-    color: black;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.req-inner-cont{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 10px;
 }
-.display-pass>input{
-    font-size: 30px;
-    font-weight: 400;
-    outline: 0;
-    border: 0;
-    height: 70px;
-    width: 70%;
+.requirement>h3{
+  color: #011f3c;
+  font-size: 28px;
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 2px solid black;
 }
-.display-pass>img{
-    height: 50%;
-    cursor: pointer;
-}
-.generate-button{
-    background-color: #011F3C;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: none;
-    font-size: 24px;
-    font-weight: 500;
-    color: white;
+.range-cont{
+  display: flex;
+  align-items: center;
 }
 
-
+#range{
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;  
+  background: #000000;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+#range:hover {
+  opacity: 1;
+}
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  background: #011f3c;
+  cursor: pointer;
+}
+.range-val{
+  margin: 0 10px;
+  color: black;
+  font-size: 20px;
+}
+.symbol-req-cont{
+  font-size: 20px;
+}
+.generate-button {
+  background-color: #011f3c;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
 
 @media (max-width: 600px) {
-    .container{
-        padding: 60px 0;
-    }
-    .company-name{
-        font-size: 40px;
-    }
-    .title{
-        font-size: 30px;
-    }
-
-    .display-pass{
-        width: 98%;
-        height: 60px;
-        padding: 0 8px;
-    }
-    .display-pass>input{
-        height: 50px;
-        width: 85%;
-        font-size: 24px;
-    }
-    .generate-button{
-        padding: 10px 20px;
-        font-size: 20px;
-    }
+  .container {
+    padding: 60px 0;
   }
+  .company-name {
+    font-size: 40px;
+  }
+  .title {
+    font-size: 30px;
+  }
+/* password  */
+  .display-pass {
+    width: 98%;
+    height: 60px;
+    padding: 0 8px;
+  }
+  .display-pass > input {
+    height: 50px;
+    width: 85%;
+    font-size: 24px;
+  }
+/* requirement */
+.requirement{
+  width: 98%;
+  height: 50vh;
+}
+.req-inner-cont{
+  flex-direction: column;
+}
+.range-cont{
+  margin: 8px 0;
+}
+.symbol-req-cont{
+  margin: 8px 0;
+  font-size: 22px;
+}
+/* button  */
+  .generate-button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+}

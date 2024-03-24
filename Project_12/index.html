@@ -19,7 +19,47 @@
         <input type="text" placeholder="Password" id="pass-input">
         <img src="/Project_12/Project_10_img/copy.png" alt="copy-img" id="copy-img">
     </div>
+
+    <div class="requirement">
+        <h3>Customize Your Password</h3>
+        <div class="req-inner-cont">
+            <!-- length range -->
+            <div class="range-cont">
+                <input type="range" min="8" max="20" id="range" value="12">
+                <span class="range-val">12</span>
+            </div>
+
+
+
+            <!-- symbol uprcase lowercase number chceck  -->
+        <div class="symbol-req-cont">
+        <div>
+            <input type="checkbox" id="number" checked  class="all-checkbox" value="number">
+                <label for="number">Number</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="symbol" checked class="all-checkbox" value="symbol">
+                <label for="symbol">Symbol</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="uppercase" checked class="all-checkbox" value="uppercase">
+            <label for="uppercase">Uppercase</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="lowercase" checked  class="all-checkbox" value="lowercase">
+            <label for="lowercase">Lowercase</label>
+        </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <button class="generate-button">Generate Password</button>
+
     </div>
 </main>
 
