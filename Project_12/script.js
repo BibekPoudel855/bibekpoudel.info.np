@@ -48,11 +48,22 @@ function generatePassword() {
             if(numberCheckbox.checked){
                 password+=generateAndReturn(number);
             }
+            if (!numberCheckbox.checked && !symbolChekbox.checked && !upperCaseCheckbox.checked && !lowerCaseCheckbox.checked) {
+                customAlert();
+                break;
+            }
         }
         displayPassword(password);
 }
 
-
+function customAlert() {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="https://www.bibekpoudel.info.np/Error/error.html">"Why do I have this issue?"</a>'
+    });
+}
 function displayPassword(password) {
     inputField.value=password;
 }
