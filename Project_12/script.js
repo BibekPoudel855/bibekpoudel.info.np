@@ -65,6 +65,7 @@ function customAlert() {
     });
 }
 function displayPassword(password) {
+    password = password.substring(0,length);
     inputField.value=password;
 }
 
