@@ -31,7 +31,6 @@ faqBoxes.forEach((box)=>{
     box.addEventListener("click",(e)=>{
     i.classList.toggle("js-rotate");
     let ans=box.childNodes;
-    console.log();
     ans[3].classList.toggle("js-passive");
         });
     });
