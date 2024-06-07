@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+/* for button top where we click it directs to alaram section */
+.top-alaram-section-button-cont {
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#set-alaram-button {
+  padding: 12px 16px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  transition: all 70ms ease;
+}
+#set-alaram-button:hover {
+  background-color: rgb(48, 47, 47);
+  font-size: 19px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+/* main clock  */
+.container {
+  margin: -35px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-clock {
+  position: relative;
+  height: 35vw;
+  width: 35vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 5px solid black;
+  background: url("/Project_14/Project_14_IMG/clock.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hrs,
+.sec,
+.min {
+  position: absolute;
+  background-color: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+.hrs {
+  width: 1.5%;
+  height: 12%;
+  top: 38.5%;
+  left: 49.4%;
+}
+.min {
+  width: 0.8%;
+  height: 16%;
+  top: 34.5%;
+  left: 49.8%;
+}
+.sec {
+  width: 0.5%;
+  height: 22%;
+  top: 28.5%;
+  left: 49.9%;
+}
+/* digital clock  */
+.digital-clock {
+  height: 50px;
+  width: 230px;
+  margin: 10px 0 0 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.digital-hrs,
+.digital-min,
+.digital-sec {
+  height: 40px;
+  width: 70px;
+  font-size: 18px;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* /////alaram section ///// */
+#alaram-section {
+  height: 100vh;
+  width: 100vw;
+}
+.alaram-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.set-alaram-cont {
+  width: 19vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#date-time-input {
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 13px;
+}
+
+#add-alaram-button,
+#remove-alaram-button {
+  padding: 12px 20px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  transition: all 70ms ease;
+}
+
+#add-alaram-button {
+  background-color: green;
+}
+#remove-alaram-button {
+  background-color: red;
+}
+
+#add-alaram-button:hover,
+#remove-alaram-button:hover {
+  font-size: 16px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+/* alaram status */
+.alaram-status-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin: 0px 0;
+}
+#alaram-status {
+  width: 450px;
+  max-height: 125px;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+#alaram-status h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+#alaram-status h3::after {
+  content: "Alaram Status :";
+}
+
+/* mobile size  */
+@media (max-width: 600px) {
+  /* top alaram button area  */
+  .top-alaram-section-button-cont {
+    padding: 15px 0 10px 0;
+    color: red;
+  }
+  #set-alaram-button {
+    padding: 8px 10px;
+    font-size: 27px;
+  }
+  #set-alaram-button:hover {
+    font-size: 30px;
+  }
+  /* analog clock  */
+  .main-clock {
+    height: 90vw;
+    width: 90vw;
+  }
+
+  /* alaram  */
+  .set-alaram-cont {
+    width: 90vw;
+  }
+  #date-time-input {
+    font-size: 14px;
+    padding: 8px 11px;
+  }
+
+  #add-alaram-button,
+  #remove-alaram-button {
+    padding: 10px 18px;
+  }
+
+  /* alaram status */
+  .alaram-status-cont {
+    height: 150px;
+    width: 100vw;
+  }
+  #alaram-status {
+    width: 100vw;
+    padding: 10px;
+  }
+  #alaram-status h3 {
+    font-size: 18px;
+  }
+}

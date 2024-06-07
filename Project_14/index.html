@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+
+<body>
+    <!-- /* for button top where we click it directs to alaram section */ -->
+    
+    <div class="top-alaram-section-button-cont">
+        <button id="set-alaram-button">Set Alaram <i class="fa-regular fa-alarm-clock fa-shake"></i></button>
+
+    </div>
+
+    <div class="container">
+        <div class="main-clock">
+            <div class="hrs"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+        </div>
+
+        <div class="digital-clock">
+            <div class="digital-hrs"></div>
+            <div class="digital-min"></div>
+            <div class="digital-sec"></div>
+        </div>
+    </div>
+
+
+
+
+    <section id="alaram-section" class="alaram-section">
+        <div class="set-alaram-cont">
+            <input type="datetime-local" id="date-time-input">
+            <div class="alaram-controls">
+                <button id="add-alaram-button">Add Alaram</button>
+                <button id="remove-alaram-button">Remove Alaram</button>
+            </div>
+        </div>
+        <div class="alaram-status-cont">
+            <div id="alaram-status">
+                <h3><!--content added from css pesudo element--></h3>
+                <p class="alaram-date-para"><!--Added Content from js--></p>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
