@@ -1,6 +1,7 @@
 // url for api
 const apiKey = "076b46e31b493c879d35fb7e";
-// url structure
+// url structure and source 
+//https://www.exchangerate-api.com/
 // const BASE_URL =`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 const BASE_URL = `https://v6.exchangerate-api.com/v6/${apiKey}/latest`;
 //selecting the elements
