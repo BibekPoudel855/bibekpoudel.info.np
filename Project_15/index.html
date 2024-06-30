@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="outer-container">
+    <h1 id="top-heading">Currency Converter</h1>
+    <div class="inner-container">
+      <form>
+        <div class="drop-down">
+
+          <div class="from">
+            <input type="number" placeholder="Enter Amount" value="1" id="from-input" />
+            <div class="select-container">
+              <img src="https://flagsapi.com/US/flat/64.png" alt="img" />
+              <select name="from" id="from-select">
+                <!-- option added from js -->
+              </select>
+            </div>
+          </div>
+
+          <div class="mid-icon-cont">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </div>
+
+          <div class="to">
+            <input type="number"id="to-input"/>
+            <div class="select-container">
+              <img src="https://flagsapi.com/NP/flat/64.png" alt="img"/>
+              <select name="to" id="to-select">
+                <!--option added from js  -->
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="lower-section">
+        <div class="msg-cont">
+          <div class="para-cont">
+            <p id="para-message"><!--Added From JS--></p>
+            <p id="para-date"><!--Added From JS-->Rate As Of <span></span></p>
+          </div>
+        </div>
+
+        <div class="button-cont">
+          <button id="convert-button">Convert</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="codes.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

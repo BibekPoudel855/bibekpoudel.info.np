@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* presets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main code  */
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #163300;
+  color: white;
+}
+
+#top-heading {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 40px;
+}
+
+/* main box inner cont  */
+.inner-container {
+  height: 240px;
+  width: 1100px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 40px;
+  color: rgb(0, 0, 0);
+}
+
+/* form styling  */
+form select,
+input {
+  outline: none;
+  border: none;
+}
+
+form input {
+  height: 59px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0px 10px;
+  font-size: 22px;
+}
+
+.mid-icon-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.drop-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.from {
+  display: flex;
+  width: 42%;
+}
+
+.to {
+  display: flex;
+  width: 42%;
+}
+
+.select-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  width: 10rem;
+  height: 3.5rem;
+}
+
+.select-container img {
+  height: 2rem;
+}
+
+.select-container select {
+  font-size: 1rem;
+}
+
+/* lower section */
+.lower-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.msg-cont {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+}
+/* for js  */
+#para-message{
+  font-size: 20px;
+}
+#para-message span{
+  font-weight: 1000;
+}
+#para-date{
+  font-size: 20px;
+}
+#para-date span{
+  font-weight: 1000;
+}
+
+/* button  */
+.button-cont {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#convert-button {
+  background-color: #80e142;
+  padding: 8px 62px;
+  border-radius: 25px;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+}
+
+
+/* mobile screen media query */
+@media screen and (max-width: 600px) {
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* main code  */
+  #top-heading {
+    font-size: 30px;
+  }
+
+  /* main box inner cont  */
+  .inner-container {
+    height: 80vh;
+    width: 95vw;
+    padding: 15px 7px;
+  }
+
+  /* form styling  */
+  form input {
+    height: 59px;
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 22px;
+  }
+
+  .mid-icon-cont i {
+    transform: rotate(90deg);
+  }
+
+  .drop-down {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0 0 0;
+  }
+
+  .from {
+    width: 95%;
+  }
+
+  .to {
+    width: 95%;
+  }
+
+  .select-container select {
+    background-color: rgb(254, 254, 254);
+    font-size: 1.2rem;
+  }
+
+  /* lower section */
+  .lower-section {
+    height: 200px;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .msg-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
