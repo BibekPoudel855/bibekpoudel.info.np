@@ -60,6 +60,7 @@ function changeFlagWithChangeInOption(e) {
 }
 //swap event
 swapCont.addEventListener("click",(e)=>{
+  
   let tempForSwap=fromSelect.value;
   fromSelect.value=toSelect.value;
   toSelect.value=tempForSwap;

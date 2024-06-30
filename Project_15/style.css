@@ -57,6 +57,11 @@ form input {
   align-items: center;
   justify-content: center;
   font-size: 25px;
+  cursor: pointer;
+  transition: all 50ms ease;
+}
+.mid-icon-cont:hover{
+  font-size: 30px;
 }
 .mid-icon-cont p{
   font-size: 12px;
