@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="project_7_img/logo.png" />
-    <!-- <script src="/project_7_img/New folder/New folder (9)/New folder (5)/pointer.js"></script> -->
+    <link rel="icon" type="image/x-icon" href="/Project_7/Project_7_IMG/logo.png" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/api-check/7.5.5/api-check.min.js" integrity="sha512-6HttpuMHEUe8wk/08iGK7JY0lyS2xg8KMXQy5WPe9vCd1mVEl6jkLiBLQXV1PHSuM/GAPNzGkyNtzeB9anRFDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -17,16 +16,14 @@
     <header>
         <nav class="container">
             <div class="nav-logo">
-                <a href="#"><img src="/Project_7/project_7_img/logo.png" alt="logo"></a>
+                <a href="#"><img src="/Project_7/Project_7_IMG/logo.png" alt="logo"></a>
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <h4>Sign In</h4>
             </div>
             <div class="nav-link">
-                <a href="#">Home</a>
-                <a href="#">News</a>
-                <a href="#">Sport</a>
-                <a href="#">Finance</a>
-                <a href="#">Hamas-Israil War</a>
+                <a href="#" class="atag" id="nepali">Home</a>
+                <a href="#" class="atag" id="sports">Sport</a>
+                <a href="#" class="atag" id="finance">Finance</a>
             </div>
             <i class="fa-solid fa-bars bars-for-nav"></i>
             <div class="nav-search">
@@ -38,31 +35,99 @@
         </nav>
     </header>
 
-
-
+    <p id="para-MSG" style=" margin: 5px 120px; color:black;"><!--Added from js --></p>
     <main>
-
-
-<!-- loading -->
-<div class="loading-cont">
-    <div class="loading"></div>
-  </div>
-
-
-
-        <div class="card-container container" id="card-container">
-            <!--
-                <div class="card">
+<!-- this loader container data wll be displayed from js when api fetching data -->
+        <div id="loader">
+            <div class="card">
                 <div class="card-header">
                     <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
                 </div>
                 <div class="card-content">
                     <h3 id="news-title" class="news-title">This is title</h3>
                     <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
-                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
                 </div>
             </div>
---> 
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title" class="news-title">This is title</h3>
+                    <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title" class="news-title">This is title</h3>
+                    <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title" class="news-title">This is title</h3>
+                    <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title" class="news-title">This is title</h3>
+                    <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News_IMG" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title" class="news-title">This is title</h3>
+                    <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
+                
+                    <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- main card of news api and api data will displai in this container
+         template tag data is not displayed -->
+        <div class="card-container container" id="card-container">
             <template id="template-news-card">
                 <div class="card">
                     <div class="card-header">
@@ -71,7 +136,7 @@
                     <div class="card-content">
                         <h3 id="news-title" class="news-title">This is title</h3>
                         <h6 id="news-source" class="news-source">End Gadget 26/08/2024</h6>
-                       
+                    
                         <p class="news-description" id="news-description">Lorem ipsum dolor sit, amet consectetur
                             adipisicing elit. Perspiciatis officia aliquam debitis dolores, quibusdam sequi.</p>
                     </div>
@@ -81,6 +146,6 @@
     </main>
     <footer></footer>
 
-    <script src="/Project_7/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

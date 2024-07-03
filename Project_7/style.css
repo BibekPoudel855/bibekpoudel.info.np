@@ -15,7 +15,7 @@
 }
 ul li {
   list-style-type: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 a {
   color: black;
@@ -29,6 +29,7 @@ p {
 body {
   color: var(--main-color);
   font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 i {
   cursor: pointer;
@@ -152,55 +153,33 @@ nav {
   display: none;
 }
 
-
-
-
-
-
-
-/* loading */
-
-.loading{
-	z-index: -1;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	height: 50px;
-	width: 50px;
-	/* background-color: red; */
-	border-radius: 50%;
-	border: 5px solid rgb(182, 182, 184);
-	border-top: 5px solid black;
-	animation: loader 1s ease 0s infinite normal;
-  }
-  @keyframes loader {
-	from{
-	  transform: rotate(0deg);
-	}
-	to{
-	  transform: rotate(360deg);
-	}
-  }
-
-
-
-
-
-
-
-
-/* Main Code */
+/*///////////// Main Code///////////////////// */
 
 main {
   padding-top: 20px;
   margin-top: 2.5vw;
+  height: 100vh;
 }
-.card-container {
+
+#loader{
+  width: 95vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap : 60px;
+  height: 100vh;
+}
+.card-container{
   margin: auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   row-gap: 40px;
+
+  /* for loader i made display:  none ; and i made it block in js */
+  display: none;
 }
 
 .card {
@@ -235,6 +214,12 @@ main {
   margin: 12px 6px;
 }
 
+/* for js active class in nav anchor tag  */
+.active{
+  background-color: rgb(167, 167, 167);
+  border-radius: 5px;
+  padding: 2px ;
+}
 /* Responsive */
 @media (max-width: 600px) {
   /* nav*/

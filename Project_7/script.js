@@ -1,61 +1,103 @@
-// let apikey = "d19db930781145a69e1d13dcbbb97cbe";
-let apikey = "0b8a7a4c25234a74a7bb45311cd9b190";
-const url = "https://newsapi.org/v2/everything?q=";
+// source website for api key
+// https://newsapi.org/
+let apiKey = "d19db930781145a69e1d13dcbbb97cbe";
+let baseURL = "https://newsapi.org/v2/everything?q=";
+// Selection of elements
+let loader = document.querySelector("#loader");
+let paraMSG = document.querySelector("#para-MSG");
+let cardContainer = document.querySelector(".card-container");
+let aTagArray = document.querySelectorAll(".atag");
+let navButton = document.querySelector("#nav-button");
+let navInput = document.querySelector("#nav-search");
+let navLogo = document.querySelector(".nav-logo");
+//news you want to visible
+let categoryNews = "nepali";
 
-
-window.addEventListener("load", () => fetchnews("ICC"));
-
-
-// to fetch or to get articlee or news
-async function fetchnews(query) {
-  // const res=await
-  // fetch('${url}${query}&apiKey=${apikey}');
-  const res = await fetch(`${url}${query}&apiKey=${apikey}`);
-  const data = await res.json();
-  bindData(data.articles);
+//event that will be fired when the page is loaded
+window.addEventListener("load", (e) => {
+  fetchNews(categoryNews);
+});
+async function fetchNews(query) {
+  loader.style.display = "flex";
+  try {
+    paraMSG.innerHTML = `Showing ${query.toUpperCase()} Related News`;
+    let response = await fetch(
+      `${baseURL}${query}&apiKey=${apiKey}&sortBy=publishedAt&apiKey=${apiKey}`
+    );
+    let data = await response.json();
+    bindData(data);
+  } catch (error) {
+    console.log("error occured", error);
+  } finally {
+    console.log("fetchNews function executed");
+    loader.style.display = "none";
+    cardContainer.style.display = "flex";
+  }
 }
-function bindData(articles) {
-  const cardsContainer = document.getElementById("card-container");
-  const newsCardTemplate = document.getElementById("template-news-card");
+let clutter = ``;
+function bindData(data) {
+  articleArray = data.articles;
+  articleArray.forEach((article) => {
+    if (!article.urlToImage) {
+      return;
+    } else {
+      clutter += `<div class="card">
+            <div class="card-header">
+                <img src="${article.urlToImage}" alt="News_IMG" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title" class="news-title"><a target="_blank" href="${article.url}">${article.title}</a></h3>
+                <h6 id="news-source" class="news-source">${article.source.name} ${article.publishedAt}</h6>
+                <p class="news-description" id="news-description">${article.description}</p>
+            </div>
+        </div>`;
+    }
+  });
+  cardContainer.innerHTML = clutter;
+}
 
-  cardsContainer.innerHTML = "";
-
-  articles.forEach((article) => {
-    if (!article.urlToImage) return;
-    const cardClone = newsCardTemplate.content.cloneNode(true);
-    fillDataInCard(cardClone, article);
-    cardsContainer.appendChild(cardClone);
+currSelected = document.querySelector("#nepali");
+currSelected.classList.add("active");
+function changeNewsCategoryByOnClickAnchorTag() {
+  aTagArray.forEach((aTag) => {
+    aTag.addEventListener("click", (e) => {
+      // to add active class on the clicked anchor tag
+      currSelected.classList.remove("active");
+      currSelected = e.target;
+      e.target.classList.add("active");
+      // to change category of news when click a tag
+      clutter = ``;
+      let query = e.target.getAttribute("id");
+      paraMSG.innerHTML = `Showing ${query} News`;
+      fetchNews(query);
+    });
   });
 }
-// fill data in template tag
-function fillDataInCard(cardClone, article) {
-  const newsImg = cardClone.querySelector("#news-img");
-  const newsTitle = cardClone.querySelector("#news-title");
-  const newsSource = cardClone.querySelector("#news-source");
-  const newsDesc = cardClone.querySelector("#news-description");
+changeNewsCategoryByOnClickAnchorTag();
 
-  newsImg.src = article.urlToImage;
-  newsTitle.innerHTML = article.title;
-  newsDesc.innerHTML = article.description;
+// search news by input field
+navButton.addEventListener("click", () => {
+  clutter = ``;
+  if (navInput.value == "") {
+    navInputValue = "nepali";
+    fetchNews(navInputValue);
+  } else {
+    let navInputValue = navInput.value;
+    fetchNews(navInputValue);
+    // to remove active class from the anchor tag
+    // when search button is clicked
+    currSelected.classList.remove("active");
+    currSelected = document.querySelector("#nepali");
+    currSelected.classList.add("active");
+  }
+});
 
-  const date = new Date(article.publishedAt).toLocaleString("en-US", {
-    timeZone: "Asia/Jakarta",
-  });
-
-  newsSource.innerHTML = `${article.source.name} · ${date}`;
-
-  cardClone.firstElementChild.addEventListener("click", () => {
-    window.open(article.url, "_blank");
-  });
-}
-
-// Categ of nerws
-// let news_search=prompt('Search News');
-// window.addEventListener('load', ()=> fetchnews(news_search));
+//reload page when click on the logo
+navLogo.addEventListener("click", () => {
+  window.location.reload();
+});
 
 
 
-// Input
-// adding function of search button  and input
-const searchButton = document.getElementById("nav-button");
-const searchText = document.getElementById("nav-search");
+
+
