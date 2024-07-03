@@ -12,7 +12,6 @@ let navInput = document.querySelector("#nav-search");
 let navLogo = document.querySelector(".nav-logo");
 //news you want to visible
 let categoryNews = "nepali";
-
 //event that will be fired when the page is loaded
 window.addEventListener("load", (e) => {
   fetchNews(categoryNews);
@@ -21,9 +20,7 @@ async function fetchNews(query) {
   loader.style.display = "flex";
   try {
     paraMSG.innerHTML = `Showing ${query.toUpperCase()} Related News`;
-    let response = await fetch(
-      `${baseURL}${query}&apiKey=${apiKey}&sortBy=publishedAt&apiKey=${apiKey}`
-    );
+    let response = await fetch(`${baseURL}${categoryNews}&sortBy=publishedAt&apiKey=${apiKey}`);
     let data = await response.json();
     bindData(data);
   } catch (error) {
