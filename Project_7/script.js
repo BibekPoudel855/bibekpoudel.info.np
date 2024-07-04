@@ -1,5 +1,8 @@
-let apiKey = "d19db930781145a69e1d13dcbbb97cbe";
+// source website for api key
+// https://newsapi.org/
+let apiKey = "0b8a7a4c25234a74a7bb45311cd9b190";
 let baseURL = "https://newsapi.org/v2/everything?q=";
+// Selection of elements
 let loader = document.querySelector("#loader");
 let paraMSG = document.querySelector("#para-MSG");
 let cardContainer = document.querySelector(".card-container");
@@ -7,19 +10,20 @@ let aTagArray = document.querySelectorAll(".atag");
 let navButton = document.querySelector("#nav-button");
 let navInput = document.querySelector("#nav-search");
 let navLogo = document.querySelector(".nav-logo");
+//news you want to visible
 let categoryNews = "nepali";
-
+//event that will be fired when the page is loaded
 window.addEventListener("load", (e) => {
   fetchNews(categoryNews);
 });
-
 async function fetchNews(query) {
   loader.style.display = "flex";
   try {
     paraMSG.innerHTML = `Showing ${query.toUpperCase()} Related News`;
-    let response = await fetch(`${baseURL}${query}&sortBy=publishedAt&apiKey=${apiKey}`);
+    let response = await fetch(
+      `${baseURL}${categoryNews}&sortBy=publishedAt&apiKey=${apiKey}`
+    );
     let data = await response.json();
-    console.log(data); // Inspect the response
     bindData(data);
   } catch (error) {
     console.log("error occured", error);
@@ -29,14 +33,9 @@ async function fetchNews(query) {
     cardContainer.style.display = "flex";
   }
 }
-
+let clutter = ``;
 function bindData(data) {
-  if (!data.articles) {
-    console.log('No articles found');
-    return;
-  }
-  let articleArray = data.articles;
-  let clutter = ``;
+  articleArray = data.articles;
   articleArray.forEach((article) => {
     if (!article.urlToImage) {
       return;
@@ -56,15 +55,16 @@ function bindData(data) {
   cardContainer.innerHTML = clutter;
 }
 
-let currSelected = document.querySelector("#nepali");
+currSelected = document.querySelector("#nepali");
 currSelected.classList.add("active");
-
 function changeNewsCategoryByOnClickAnchorTag() {
   aTagArray.forEach((aTag) => {
     aTag.addEventListener("click", (e) => {
+      // to add active class on the clicked anchor tag
       currSelected.classList.remove("active");
       currSelected = e.target;
       e.target.classList.add("active");
+      // to change category of news when click a tag
       clutter = ``;
       let query = e.target.getAttribute("id");
       paraMSG.innerHTML = `Showing ${query} News`;
@@ -74,15 +74,24 @@ function changeNewsCategoryByOnClickAnchorTag() {
 }
 changeNewsCategoryByOnClickAnchorTag();
 
+// search news by input field
 navButton.addEventListener("click", () => {
   clutter = ``;
-  let navInputValue = navInput.value || "nepali";
-  fetchNews(navInputValue);
-  currSelected.classList.remove("active");
-  currSelected = document.querySelector("#nepali");
-  currSelected.classList.add("active");
+  if (navInput.value == "") {
+    navInputValue = "nepali";
+    fetchNews(navInputValue);
+  } else {
+    let navInputValue = navInput.value;
+    fetchNews(navInputValue);
+    // to remove active class from the anchor tag
+    // when search button is clicked
+    currSelected.classList.remove("active");
+    currSelected = document.querySelector("#nepali");
+    currSelected.classList.add("active");
+  }
 });
 
+//reload page when click on the logo
 navLogo.addEventListener("click", () => {
   window.location.reload();
 });

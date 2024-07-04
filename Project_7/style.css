@@ -6,8 +6,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
-:root {
+:root{
   --main-color: #183b56;
   --secondary-color: #577592;
   --third-color: #2294ed;
