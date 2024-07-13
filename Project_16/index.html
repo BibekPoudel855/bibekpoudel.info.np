@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="card-cont">
+        <div class="input-cont">
+          <input type="text" placeholder="Enter Location" id="input-field" />
+          <button id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="main-wheather">
+          <img src="" id="curr-wheather-icon" />
+          <h1 id="curr-tempr"><!--added from js--></h1>
+          <h3 class="location-name"><!--added from js--></h3>
+
+          <div class="inside-main-lower-section">
+            <div class="humidity-cont">
+              <img src="/Project_16/Project_16_IMG/humidity.png" alt="img" />
+              <div>
+                <p id="humidity-para"><!--added from js--></p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="wind-speed-cont">
+              <img src="/Project_16/Project_16_IMG/wind.png" alt="img" />
+              <div>
+                <p id="wind-speed-para"><!--added from js--></p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- for loader its style from js and added and removed from js async function before data fetched and displayData()function respectevely -->
+        <div class="loader-container">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
