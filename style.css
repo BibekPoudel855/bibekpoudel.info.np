@@ -123,9 +123,6 @@ header {
 .nav-search  i {
     color: rgb(255, 255, 255);
 }
-#search-for-nav {
-    display: none;
-}
 /*///// for main code //////*/
 .main-heading {
   text-align: center;
@@ -191,8 +188,15 @@ header {
 /* for moble screen  */
 @media (max-width: 600px) {
   /* nav*/
+  .container {
+    max-width: 70vw;
+    margin-inline: auto;
+  }
   nav {
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100px;
+    padding: 0 0 10px 0;
   }
   .nav-logo {
     display: flex;
@@ -206,21 +210,19 @@ header {
     display: none;
   }
   .nav-search .nav-search-box {
-    display: none;
+    width: 60vw;
+    font-size: 15px;
+    padding:12px 10px;
   }
   .nav-search button {
     display: none;
   }
   #search-for-big-scr{
-    display: none;
+    font-size: 25px;
   }
-  #search-for-nav {
-    display: inline-block;
-    font-size: 5vw;
-    margin-right: 2vw;
-  }
+
   /* for nav triple bar && for search buton */
-  nav .fa-bars,#search-for-nav{
+  nav .fa-bars{
     color: white;
     font-size: 25px;
   }

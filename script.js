@@ -3,6 +3,7 @@ let mainContainer=document.querySelector(".main-container");
 let searchBox=document.querySelector("#nav-search");
 let searchButtonBigScreen=document.querySelector("#search-for-big-scr");
 let resultNotFound=document.querySelector(".result-not-found");
+
 // main code
 let clutter='';
 addStructure();
