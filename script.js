@@ -2,12 +2,12 @@
 let mainContainer=document.querySelector(".main-container");
 let searchBox=document.querySelector("#nav-search");
 let searchButtonBigScreen=document.querySelector("#search-for-big-scr");
+let resultNotFound=document.querySelector(".result-not-found");
 // main code
 let clutter='';
 addStructure();
 function addStructure() {
     projectData.forEach((data)=>{
-        console.log(data.projectLink);
         clutter+=`
         <div class="card">
                 <img src="${data.projectImg}" alt="img">
@@ -38,6 +38,7 @@ function searchProjects(query) {
 searchBox.addEventListener("input",()=>{
     let query = searchBox.value;
     const results = searchProjects(query);
+    console.log(results);
     addStructureForSearchedData(results);
 });
 function addStructureForSearchedData(results) {
@@ -52,5 +53,14 @@ function addStructureForSearchedData(results) {
             </div>
         `;
     });
-    addClutterToPage(clutter);
+// for to make if search not found then show all items
+    if (clutter=='') {
+        //for to show result-not-found
+        resultNotFound.style.display="block";
+        addStructure();
+    }else{
+        //for to hide result-not-found
+        resultNotFound.style.display="none";
+        addClutterToPage(clutter);
+    }
 }

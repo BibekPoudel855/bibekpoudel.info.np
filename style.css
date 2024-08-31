@@ -131,12 +131,18 @@ header {
   text-align: center;
   margin: 20px 0;
 }
+/* for to show result-not-found */
+.result-not-found{
+  display: none;
+  text-align: center;
+  color : red;
+}
 .main-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 30px;
-  column-gap: 30px;
+  row-gap: 35px;
+  column-gap: 40px;
   margin: 30px 0;
 }
 
