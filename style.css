@@ -311,4 +311,13 @@ footer .footer-main-container a:hover{
   .card{
     width: 90vw;
   }
+  /* footer  */
+  footer{
+    margin-top: 0.8px;
+  }
+  .footer-main-container{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
 }
