@@ -4,7 +4,7 @@ let projectData = [
         projectImg: "/Home-Page-Img/unsplash_logo.png",
         projectLink: "/Project_17/index.html",
         projectDescription: "This is an website from which you can download images. The credit goes to unsplash.com because we used their API",
-        projectChangesDate: "2024-09-20",
+        projectChangesDate: "2024-09-25",
         projectCategory: "Web Development"
     },
     {
