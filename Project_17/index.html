@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Search</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <!-- nav  -->
-    <nav>
-      <div class="nav-logo">
-        <img src="/Project_17/Project_17_IMAGES/unsplash_logo.png" alt="unsplash_logo" />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      <div class="nav-input-field">
-        <button id="search-btn"><i class="fas fa-search"></i></button>
-        <input type="text" id="search-input" placeholder="Search photos" />
-        <button id="nav-cross-btn"><i class="fa-solid fa-xmark"></i></button>
-        <button id="nav-visual-search">
-          <i class="fa-solid fa-camera-retro"></i>
-        </button>
-      </div>
+<body>
+  <!-- nav  -->
+  <nav>
+    <div class="nav-logo">
+      <img src="/Project_17/Project_17_IMAGES/unsplash_logo.png" alt="unsplash_logo" />
+    </div>
 
-      <div class="nav-other-detail">
-        <a href="https://unsplash.com/plus" id="nav-get-unsplash-a"
-          >Get Unsplash+</a
-        >
-        <button id="submit-img-button">Submit an image</button>
-        <i class="fa-solid fa-bell" id="nav-notification-icon"></i>
-        <i class="fa-solid fa-user" id="nav-profile-icon"></i>
-        <i class="fa-solid fa-bars" id="nav-triple-bar"></i>
-      </div>
-    </nav>
-    <!-- main code  -->
-    <main class="container">
-      <h1 class="current-query-h1"></h1>
-      <p>source : unsplash.com</p>
-      <div class="search-results">
-        <!-- added from js  -->
-      </div>
-      <button class="show-more-button">Show More</button>
-    </main>
-    <!-- footer  -->
-    <footer></footer>
-    <script src="script.js"></script>
-  </body>
+    <div class="nav-input-field">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <input type="text" id="search-input" placeholder="Search photos" />
+      <button id="nav-cross-btn"><i class="fa-solid fa-xmark"></i></button>
+      <button id="nav-visual-search">
+        <i class="fa-solid fa-camera-retro"></i>
+      </button>
+    </div>
+
+    <div class="nav-other-detail">
+      <a href="https://unsplash.com/plus" id="nav-get-unsplash-a">Get Unsplash+</a>
+      <button id="submit-img-button">Submit an image</button>
+      <i class="fa-solid fa-bell" id="nav-notification-icon"></i>
+      <i class="fa-solid fa-user" id="nav-profile-icon"></i>
+      <i class="fa-solid fa-bars" id="nav-triple-bar"></i>
+    </div>
+  </nav>
+  <!-- main code  -->
+  <main class="container">
+    <h1 class="current-query-h1"></h1>
+    <p>source : unsplash.com</p>
+    <div class="search-results">
+      <!-- added from js  -->
+    </div>
+    <button class="show-more-button">Show More</button>
+  </main>
+  <!-- footer  -->
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
