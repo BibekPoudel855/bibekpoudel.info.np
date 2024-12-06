@@ -126,6 +126,17 @@ header {
     color: rgb(255, 255, 255);
 }
 /*///// for main code //////*/
+.latest-links{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+.latest-links a{
+  color: blue;
+  text-decoration: underline;
+}
 .main-heading {
   text-align: center;
   margin: 20px 0;
