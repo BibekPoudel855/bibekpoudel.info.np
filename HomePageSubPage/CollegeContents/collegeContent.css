@@ -138,6 +138,11 @@ main {
 p {
   text-align: center;
 }
+.lastest-files{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .college-contents {
   display: flex;
   flex-direction: column;
