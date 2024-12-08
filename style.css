@@ -126,6 +126,7 @@ header {
     color: rgb(255, 255, 255);
 }
 /*///// for main code //////*/
+/* top latest link or college content link  */
 .latest-links{
   margin: 20px 0;
   display: flex;
@@ -136,6 +137,25 @@ header {
 .latest-links a{
   color: blue;
   text-decoration: underline;
+}
+/* for react project button  */
+.react-project-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.react-project-button{
+  padding: 15px 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: black;
+  border: none;
+}
+.react-project-button a{
+  color: white;
 }
 .main-heading {
   text-align: center;
