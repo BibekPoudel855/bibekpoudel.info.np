@@ -153,6 +153,14 @@ header {
   font-weight: 500;
   background-color: black;
   border: none;
+  transition: all 80ms ease;
+}
+.react-project-button:hover{
+  background-color: white;
+  border: 1px solid black;
+}
+.react-project-button:hover a{
+  color: black;
 }
 .react-project-button a{
   color: white;
