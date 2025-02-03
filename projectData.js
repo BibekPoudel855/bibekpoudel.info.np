@@ -80,6 +80,13 @@ let projectData = [
         projectCategory: "Clone"
     },
     {
+        projectName : "Netch Watches",
+        projectImg: "/Home-Page-Img/netch.png",
+        projectLink: "/Project_18/index.html",
+        projectDescription: "A project featuring interactive components for user engagement and dynamic content presentation on the web.",
+        projectChangesDate: "2025-02-02",
+    },
+    {
         projectName: "Amazon",
         projectImg: "/Home-Page-Img/amazon.jpg",
         projectLink: "/Project/index.html",

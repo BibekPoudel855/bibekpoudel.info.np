@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Buy Your Next Luxury Watch from Netch Watches. You Can Get Discounts On Any Watches. We Will Deliver Across World." />
+  <meta name="keywords"
+    content="Watch Ecommerce, Rolex, Watch, Netch Watches, Buy Watch, Smart Watch, Skeleton Watch, Netch" />
+  <meta name="author" content="Aviyan Thapa,Bibek Poudel,Kritesh Dharel, Rahil Kunwar, Unita Rai">
+  <title>Netch Watches</title>
+  <!-- linking css file for common code  -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- internal css  -->
+  <style>
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* left section  */
+    .hero-left-content {
+      height: 600px;
+      width: 628px;
+      padding: 200px 0px;
+      /* background-color: red; */
+    }
+
+    .hero .hero-left-content h1 {
+      font-size: 60px;
+      font-family: sans-serif;
+      font-family: "Lucida Grande", "Verdana", "Segoe UI", "Arial", sans-serif;
+      font-weight: 900;
+    }
+
+    .hero .hero-left-content button {
+      /* display: inline-block; */
+      padding: 18px 37px;
+      margin-top: 20px;
+      background-color: #0bcdf8;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+    }
+
+    .hero .hero-left-content button:hover {
+      background-color: #0b8cf8;
+      font-size: 20.2px;
+    }
+
+    /* right section hero  */
+    .hero-right-section {
+      width: 628px;
+      height: 600px;
+    }
+
+    /* popular brand section  */
+    .brand-list-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .all-brand-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 222px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .all-brand-div a {
+      transition: all 0.3s ease;
+    }
+
+    .all-brand-div:hover a {
+      color: #0bcdf8;
+      cursor: pointer;
+    }
+
+    /* new in store section  */
+    .new-in-store-up-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #view-all-anchor {
+      transition: 0.3s ease;
+    }
+
+    #view-all-anchor:hover {
+      color: #0bcdf8;
+      font-size: 17px;
+    }
+
+    .new-store-card-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .new-store-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 450px;
+      width: 300px;
+      background-color: #f1f1f1;
+    }
+
+    .new-store-card img {
+      height: 300px;
+    }
+
+    .new-store-card .card-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .new-in-store .card-details h6 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .new-store-card .card-details .price {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 150px;
+      margin: 20px 0;
+    }
+
+    .new-in-store .card-details button {
+      padding: 10px 40px;
+      background-color: #0bcdf8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .new-in-store .card-details button:hover {
+      background-color: #0b8cf8;
+      cursor: pointer;
+    }
+
+    /* explore netch section  */
+    .explore-netch h1 {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 40px 0;
+    }
+
+    .explore-netch-card-cont {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .explore-card img {
+      width: 385px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .explore-card h4 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    .explore-card a {
+      transition: all 0.3s ease;
+    }
+
+    .explore-card a:hover {
+      color: #0bcdf8;
+      cursor: pointer;
+    }
+
+    /* research blog section  */
+    .research-blog-container {
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+
+    .research-blog-container h1 {
+      font-size: 30px;
+      border-bottom: 3px solid #0bcdf8;
+      width: 95%;
+    }
+
+    .research-blog-container p {
+      font-size: 20px;
+      color: #7a7a7a;
+      margin: 10px 0;
+    }
+
+    .research-blog-container a {
+      font-size: 20px;
+      color: #0bcdf8;
+      text-decoration: underline;
+    }
+
+    /* about us section  */
+    .about-us {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .home-about-left-content {
+      height: 300px;
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    .home-about-left-content h1 {
+      font-size: 30px;
+      border-bottom: 3px solid #0bcdf8;
+      width: 95%;
+    }
+
+    .home-about-texts {
+      margin-top: 30px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .home-about-left-content p {
+      color: #7a7a7a;
+      margin: 10px 0;
+    }
+
+    .home-about-right-content {
+      height: 300px;
+      width: 50%;
+    }
+
+    /* newsletter section  */
+    .newsletter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: #f1f1f1;
+    }
+
+    .subscribe-newsletter-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .subscribe-newsletter-content p {
+      font-size: 20px;
+      margin: 0 0 20px 0px;
+      color: #7a7a7a;
+    }
+
+    .subscribe-newsletter-form input {
+      padding: 10px 20px;
+      width: 300px;
+      margin-left: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .subscribe-newsletter-form button {
+      padding: 10px 20px;
+      background-color: #0bcdf8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.7s ease;
+    }
+
+    .subscribe-newsletter-form button:hover {
+      background-color: #0b8cf8;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <!--////// top auto scroll marquee //////////-->
+    <div class="marquee">
+      <marquee class="marquee-top-scroll flex-box" behaviour="alternate" direction="left">
+        <span class="marquee-outer-span"><span>&#8226;</span>Shop Will Be Closed On Feb 02 Due To
+          Metting Of Our Staffs</span>
+        <span class="marquee-outer-span"></span>
+        <span class="marquee-outer-span"><span>•</span> 5 Years Of Warranty On All Watches</span>
+        <span class="marquee-outer-span"><span>•</span> Free Shipping All Over Solar System</span>
+        <span class="marquee-outer-span"><span>•</span>Upto 0.99% Off Before Feb 02</span>
+        <span class="marquee-outer-span"><span>•</span>All Store Will Be Closed On February 02 Due To
+          Metting Of Our Staffs</span>
+        <span class="marquee-outer-span"></span>
+        <span class="marquee-outer-span"><span>•</span> 5 Years Of Warranty On All Watches</span>
+        <span class="marquee-outer-span"><span>•</span> Free Shipping All Over Solar System</span>
+        <span class="marquee-outer-span"><span>•</span>Upto 0.99% Off Before Feb 02</span>
+      </marquee>
+    </div>
+    <!--/////// nav bar  ////////////-->
+    <nav class="container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <h1><span>Netch</span> Watches</h1>
+        </a>
+      </div>
+      <div class="nav-link">
+        <a href="#" style="color:#0bcdf8;">Home</a>
+        <a href="html/product.html">Product</a>
+        <a href="html/research.html">Research</a>
+        <a href="html/blog.html">Blog</a>
+        <a href="html/about.html">About Us</a>
+      </div>
+    </nav>
+  </header>
+  <!--/////// main content /////////-->
+  <main>
+    <!--////// hero section ///////-->
+    <section class="hero container" id="hero-container">
+      <div class="hero-left-content">
+        <h1>Buy Watches</h1>
+        <p style="  font-size: 30px;
+        font-weight: 500;
+        color: #7a7a7a;">Get Upto 5% Off On All Watches</p>
+        <button id="shop-now" onclick="shopNowButtonEvent()">Shop Now</button>
+      </div>
+      <div class="hero-right-content">
+        <img style="height: 600px; width: 600px" src="resources/images/Home-Photos/hero-img.png" alt="hero-image" />
+      </div>
+    </section>
+    <!-- ///////popular brand section ///////// -->
+    <section class="popular-brands container">
+      <h1 style="font-size: 30px;
+      font-weight: 700;
+      margin: 40px 0;">Popular Brands</h1>
+      <div class="brand-list-container">
+        <div class="all-brand-div"><a href="https://www.rolex.com" target="_blank">Rolex</a></div>
+        <div class="all-brand-div"><a href="https://www.omegawatches.com" target="_blank">Omega</a></div>
+        <div class="all-brand-div"><a href="https://www.patek.com" target="_blank">Patek Philippe</a></div>
+        <div class="all-brand-div"><a href="https://www.audemarspiguet.com" target="_blank">Audemars Piguet</a></div>
+        <div class="all-brand-div"><a href="https://www.tagheuer.com" target="_blank">Tag Heuer</a></div>
+        <div class="all-brand-div"><a href="https://www.cartier.com" target="_blank">Cartier</a></div>
+        <div class="all-brand-div"><a href="https://www.iwc.com" target="_blank">IWC Schaffhausen</a></div>
+        <div class="all-brand-div"><a href="https://www.breitling.com" target="_blank">Breitling</a></div>
+        <div class="all-brand-div"><a href="https://www.jaeger-lecoultre.com" target="_blank">Jaeger-LeCoultre</a></div>
+        <div class="all-brand-div"><a href="https://www.hublot.com" target="_blank">Hublot</a></div>
+      </div>
+    </section>
+    <!--// new in store section /// -->
+    <section class="new-in-store container">
+      <div class="new-in-store-up-content">
+        <h1 style="font-size: 30px;
+        font-weight: 700;
+        margin: 40px 0;">New In Store</h1>
+        <a href="html/product.html" id="view-all-anchor">View All ></a>
+      </div>
+      <div class="new-store-card-container">
+        <div class="new-store-card">
+          <img src="resources/images/Home-Photos/calvin-new-store.png" alt="img" />
+          <div class="card-details">
+            <h6>Calvin Klein</h6>
+
+            <div class="price">
+              <del>$6000</del>
+              <p>$12999.99</p>
+            </div>
+            <button onclick="buyNowButton()">Buy</button>
+          </div>
+        </div>
+
+        <div class="new-store-card">
+          <img src="resources/images/Home-Photos/omega-new-store.png" alt="img" />
+          <div class="card-details">
+            <h6>Omega Speedmaster</h6>
+
+            <div class="price">
+              <del>$2000</del>
+              <p>$5999.99</p>
+            </div>
+            <button onclick="buyNowButton()">Buy</button>
+          </div>
+        </div>
+        <div class="new-store-card">
+          <img src="resources/images/Home-Photos/hublot-new-store.png" alt="img" />
+          <div class="card-details">
+            <h6>Hublot Gold</h6>
+            <div class="price">
+              <del>$5000</del>
+              <p>$9999</p>
+            </div>
+            <button onclick="buyNowButton()">Buy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--///////// explore netch section /////// -->
+    <section class="explore-netch container" style="margin-bottom: 20px;">
+      <h1>Explore Netch</h1>
+      <div class="explore-netch-card-cont">
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-men-watch.jpg" alt="img" />
+          <h4><a href="html/product.html">Men's Watches</a></h4>
+        </div>
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-women-watch.jpg.jpg" alt="img" />
+          <h4><a href="html/product.html">Women's Watches</a></h4>
+        </div>
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-smart-watch.jpg" alt="img" />
+          <h4><a href="html/product.html">Smart Watches</a></h4>
+        </div>
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-digital-watch.jpg" alt="img" />
+          <h4><a href="html/product.html">Digital Watches</a></h4>
+        </div>
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-skeleton-watch.jpg" alt="img" />
+          <h4><a href="html/product.html">Skeleton Watches</a></h4>
+        </div>
+        <div class="explore-card">
+          <img src="resources/images/Home-Photos/explore-golden-watch.jpg" alt="img" />
+          <h4><a href="html/product.html">Golden Watches</a></h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & blog section -->
+    <section class="research-blog-container container flex-box">
+      <div class="research-blog-left-content" style="width: 50%;">
+        <h1>Research</h1>
+        <p>Explore Research on Watches</p>
+        <a href="html/research.html">Read More</a>
+      </div>
+      <div class="research-blog-right-content" style="width: 50%;">
+        <h1>Blog</h1>
+        <p>Get Latest Updates of Our Blog</p>
+        <a href="html/blog.html">Read More</a>
+      </div>
+    </section>
+
+    <!-- about us section  -->
+    <section class="container about-us">
+      <div class="home-about-left-content">
+        <h1>About Us</h1>
+        <div class="home-about-texts">
+          <p>
+            Netch Watch is a popular ecommerce platform which sells various watches via online platform to all over the
+            world. People can order watch from anywhere. We have been selling watch from 2024.
+          </p>
+          <p>We have luxurious brand Watches like Rolex, Calvin, Hublot, Omega etc. You can buy watches on best prices.
+          </p>
+          <a href="html/about.html" style="   color: #0bcdf8;
+      text-decoration: underline;">Learn More</a>
+        </div>
+      </div>
+      <div class="home-about-right-content flex-box">
+        <img src="resources/images/Home-Photos/home-about-us.jpeg" alt="about-us" style="height: 100%;
+      width: 100%;" />
+        <!--image source : ideogram ai  -->
+      </div>
+    </section>
+    <!-- //////////////// newsletter section /////////// -->
+    <section class="newsletter container">
+      <div class="subscribe-newsletter-content">
+        <h2 style="font-size: 40px;
+      font-weight: 700;">Subscribe to Our Newsletter</h2>
+        <p>Get Latests updates and special offers on your Mail</p>
+        <div class="subscribe-newsletter-form">
+          <input type="email" placeholder="Enter Your Email" id="newsletter-input" />
+          <button id="newsletter-button" onclick="newsLetterValidation()">Subscribe</button>
+        </div>
+        <p id="message-for-newsletter-validation" style="margin: 20px 0;"></p>
+      </div>
+    </section>
+  </main>
+
+  <!--//////// footer section /////// -->
+  <footer>
+    <a href="#" class="back-to-top-anchor flex-box">
+      <div>Back To Top</div>
+    </a>
+    <hr />
+    <div class="footer-column-container container">
+      <div class="footer-logo">
+        <a href="index.html" id="footer-logo-a">
+          <h1><span>Netch</span> Watches</h1>
+        </a>
+      </div>
+      <div class="footer-column1 footer-column">
+        <h4>Our Information</h4>
+        <a href="#">
+          <p>Nepal</p>
+        </a>
+        <a href="#">
+          <p>Pokhara-1, Bagar</p>
+        </a>
+        <a href="#">
+          <p>9745450000</p>
+        </a>
+      </div>
+      <div class="footer-column2 footer-column">
+        <h4>Help & Support</h4>
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=netch@gmail.com" target="_blank">Account Problem</a>
+        </p>
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=netch@gmail.com" target="_blank">Return &
+            Exchange</a></p>
+        <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=netch@gmail.com" target="_blank">Manual</a></p>
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=netch@gmail.com" target="_blank">Track Order</a></p>
+        <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=netch@gmail.com" target="_blank">Warranty</a></p>
+      </div>
+      <div class="footer-column3 footer-column">
+        <h4>Quick Links</h4>
+        <p><a href="#">Home</a></p>
+        <p><a href="html/product.html">Products</a></p>
+        <p><a href="html/blog.html">Blog</a></p>
+        <p><a href="html/research.html">Research</a></p>
+        <p><a href="html/about.html">Contact</a></p>
+      </div>
+      <div class="footer-column4 footer-column">
+        <h4>Follow Us On</h4>
+        <a href="https://facebook.com/netchwatch" target="_blank"><img src="resources/icons/facebook.png"
+            alt="facebook" /></a>
+        <a href="https://instagram.com/netchwatch" target="_blank"><img src="resources/icons/instagram.png"
+            alt="instagram" /></a>
+        <a href="https://tiktok.com/netchwatch" target="_blank"><img src="resources/icons/tiktok.png" alt="tiktok" /></a>
+        <a href="https://x.com/netchwatch" target="_blank"><img src="resources/icons/x.png" alt="x" /></a>
+      </div>
+    </div>
+    <!-- footer copyright  -->
+    <p class="copy-right-para">© 2025 Netch Watches. All Rights Reserved</p>
+  </footer>
+  <!-- linking js file -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
