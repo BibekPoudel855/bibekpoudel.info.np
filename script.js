@@ -10,12 +10,14 @@ addStructure();
 function addStructure() {
   projectData.forEach((data) => {
     clutter += `
-        <div class="card">
-                <img src="${data.projectImg}" alt="img">
-                <h1><a href="${data.projectLink}" target="_blank">${data.projectName}</a></h1>
-                <p>${data.projectDescription}</p>
-                <p class="last-updated">Last Updated ${data.projectChangesDate}</p>
-            </div>
+    <a href="${data.projectLink}" target="_blank">
+      <div class="card">
+            <img src="${data.projectImg}" alt="img">
+            <h1><a href="${data.projectLink}" target="_blank">${data.projectName}</a></h1>
+            <p>${data.projectDescription}</p>
+            <p class="last-updated">Last Updated ${data.projectChangesDate}</p>
+        </div>
+        </a>
         `;
   });
   addClutterToPage(clutter);
@@ -46,12 +48,14 @@ function addStructureForSearchedData(results) {
   clutter = "";
   results.forEach((data) => {
     clutter += `
-        <div class="card">
+          <a href="${data.projectLink}" target="_blank">
+            <div class="card">
                 <img src="${data.projectImg}" alt="img">
                 <h1><a href="${data.projectLink}" target="_blank">${data.projectName}</a></h1>
                 <p>${data.projectDescription}</p>
                 <p class="last-updated">Last Updated ${data.projectChangesDate}</p>
             </div>
+          </a>
         `;
   });
   // for to make if search not found then show all items
