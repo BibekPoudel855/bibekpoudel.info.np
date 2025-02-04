@@ -9,11 +9,11 @@ console.log(newsLetterMessageP);
 //shop now button function
 function shopNowButtonEvent() {
   console.log("click");
-  open("./src/html/product.html");
+  open("./html/product.html");
 }
 // buyNow Button
 function buyNowButton() {
-  open("./src/html/product.html");
+  open("./html/product.html");
 }
 //newsletter input field validation
 function newsLetterValidation() {
